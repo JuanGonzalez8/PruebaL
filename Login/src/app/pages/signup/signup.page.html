@@ -1,0 +1,77 @@
+<ion-content>
+  <ion-img src="https://maia.aaaimx.org/img/maia.eb98bf9b.png" class="logo"></ion-img>
+  <div class="ion-text-center hcolor">
+    <h3>Bienvenido a MAIA</h3>
+    <h5 class="pd2">Ingresa tus datos</h5>
+  </div>
+  <ion-card color="light">
+    <ion-card-content>
+      <ion-item fill="outline">
+        <ion-input 
+        placeholder="Nombre(s)"
+        [clearInput]="true"
+        required 
+        ></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-item fill="outline">
+        <ion-input 
+        placeholder="Primer apellido"
+        [clearInput]="true"
+        required
+        ></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-item fill="outline">
+        <ion-input 
+        placeholder="Segundo apellido"
+        [clearInput]="true"
+        required
+        ></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-item fill="outline">
+        <ion-input 
+        type="email" ngModel email 
+        placeholder="Correo electrónico"
+        [clearInput]="true"
+        required
+        ></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-item fill="outline">
+        <ion-input 
+        type="password" 
+        placeholder="Contraseña"
+        [clearInput]="true"
+        required
+        ></ion-input>
+        <ion-note slot="error">No coincide la contraseña</ion-note>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-item fill="outline">
+        <ion-input 
+        type="password"
+        placeholder="Confirmar contraseña"
+        [clearInput]="true"
+        required
+        ></ion-input>
+        <ion-note slot="error">No coincide la contraseña</ion-note>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-button shape="round" class="ion-text-center" [routerLink]="['./login']">Crear cuenta</ion-button>
+      </ion-row>
+    </ion-grid>
+    <div class="ion-text-center">
+      <p>Ya tienes cuenta? <a [routerLink]="['../login']"class="pass">Inicia sesión</a></p>
+    </div>
+  </ion-card>
+</ion-content>
